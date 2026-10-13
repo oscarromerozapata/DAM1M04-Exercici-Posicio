@@ -67,10 +67,29 @@ footer {
 }
 
 .socials a {
-    background-color: gray;
+    background-color: black;
     padding: 6px 12px;
     border-radius: 10px;
     text-decoration: none;
-    color: black;
+    color: white;
 }
-socials before iamgen instagram
+.socials a::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    vertical-align: middle;
+}
+.socials a.instagram::before {
+    background-image: url('img/instagram.webp');
+}
+.socials a.twitter::before {
+    background-image: url('img/twitter.webp');
+}
+.socials a.facebook::before {
+    background-image: url('img/facebook.webp');
+}
