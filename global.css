@@ -1,53 +1,51 @@
 * {
     box-sizing: border-box;
 }
+
 body {
-    margin:0;
+    margin: 0;
 }
-.menu {
-    background-color: yellow;
-    padding: 8px 10px;
-    border-radius: 10px;
-    font-size: 25px;
-    margin-left: 10px;
-    margin-right: 10px;
-    white-space: nowrap;
-}
-.izquierda {
-    margin-right: auto;
-    font-size: 30px;
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 .card {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
     margin: 0;
-    background-color: lightblue;
     padding: 20px;
+    background-color: lightblue;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    min-height: 10dvh;
-}
-.card >ul {
-    display: flex;
-    align-items: center;
-    width:100%;
-    margin:0;
-    padding:0;
     gap: 8px;
+    min-height: 10dvh;
+    list-style: none;
 }
-ul a {
+
+.menu {
+    background-color: yellow;
+    padding: 5px 5px;
+    border-radius: 10px;
+    font-size: 25px;
+    margin: 0 5px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.izquierda {
+    margin-right: auto;
+    font-size: 30px;
+
+}
+
+.card a {
     text-decoration: none;
     color: black;
 }
-li.menu {
-    list-style-type: none;
-}
+
 footer {
     background-color: red;
     padding: 20px;
@@ -65,14 +63,9 @@ footer {
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
-.socials p {
-    background-color: black;
-    padding: 6px 12px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: white;
-}
+
 .socials a {
     background-color: black;
     padding: 6px 12px;
@@ -80,6 +73,7 @@ footer {
     text-decoration: none;
     color: white;
 }
+
 .socials a::before {
     content: "";
     display: inline-block;
@@ -87,20 +81,25 @@ footer {
     height: 20px;
     margin-right: 5px;
     background-size: contain;
+    background-repeat: no-repeat;
     vertical-align: middle;
 }
-.socials a.instagram::before {
-    background-image: url('img/instagram.webp');
-}
-.socials a.twitter::before {
-    background-image: url('img/twitter.webp');
-}
-.socials a.facebook::before {
-    background-image: url('img/facebook.webp');
-}
-.socials a.telefono::before {
-    background-image: url('img/telefono.webp');
-}
-.socials a.mail::before {
-    background-image: url('img/mail.webp');
+
+.socials a.instagram::before { background-image: url('img/instagram.webp'); }
+.socials a.twitter::before   { background-image: url('img/twitter.webp'); }
+.socials a.facebook::before  { background-image: url('img/facebook.webp'); }
+.socials a.telefono::before  { background-image: url('img/telefono.webp'); }
+.socials a.mail::before      { background-image: url('img/mail.webp'); }
+
+@media (max-width: 510px) {
+    
+    .menu {
+        margin: 0;
+        margin-left: auto;
+    }
+    .izquierda {
+        margin: 0;
+        flex: 1 1 auto;
+        margin: 0;
+    }
 }
