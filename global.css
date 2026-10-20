@@ -1,9 +1,7 @@
-* {
-    box-sizing: border-box;
-}
 
 body {
     margin: 0;
+    background-color: blue;
 }
 nav {
     position: sticky;
@@ -13,8 +11,7 @@ nav {
 .card {
     margin: 0;
     padding: 20px;
-    background-color: lightblue;
-    border-radius: 10px;
+    background-color: black;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -25,7 +22,7 @@ nav {
 }
 
 .menu {
-    background-color: yellow;
+    background-color: blue;
     padding: 5px 5px;
     border-radius: 10px;
     font-size: 25px;
@@ -34,7 +31,65 @@ nav {
     display: flex;
     flex-direction: row;
 }
+.cardtext {
+    margin: auto;
+    max-width: 1100px;
+    padding: 20px;
+    background-color: blue;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    min-height: 10dvh;
+    list-style: none;
+    color: white;
+    position: center;
+}
 
+button{
+    width: 15dvh;
+    height: 5dvh;
+    border-radius: 10px;
+}
+.cardtextproductes {
+    margin: auto;
+    max-width: 1100px;
+    padding: 20px;
+    background-color: blue;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    min-height: 10dvh;
+    list-style: none;
+    position: center;
+    max-width: 100%;
+}
+.imgproductes {
+    width: 40dvh;
+    height: 25dvh;
+    border-radius: 10px;
+    width: 100%;
+}
+.menutext {
+    background-color: lightblue;
+    padding: 5px 5px;
+    border-radius: 10px;
+    font-size: 25px;
+    list-style-type: none;
+    flex: 1 1 260px;
+    flex-wrap: wrap;
+    max-width: 50%;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+}
+hr {
+    width: 100%;
+}
 .izquierda {
     margin-right: auto;
     font-size: 30px;
@@ -49,7 +104,7 @@ nav {
 footer {
     background-color: red;
     padding: 20px;
-    border-radius: 10px;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -101,5 +156,10 @@ footer {
         margin: 0;
         flex: 1 1 auto;
         margin: 0;
+    }
+}
+@media (max-width: 580px){
+    .menutext{
+        max-width: 100%;
     }
 }
